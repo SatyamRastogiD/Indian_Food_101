@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue; float:centre;">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2 style="font-family:Calibri; color:#DE1C25; font-size: 55px;">Indian Food 101 Recommendation System</h2>
+            
+            <h3>Choose the Dish You Like </h3><br>
+            <select style="font-family:Calibri; font-size: 16px;" name="vehicle_name" id="car" required="required">
+                <option value="Balu shahi"  >Balu shahi</option>
+                <option value="Boondi">Boondi</option>
+                <option value="Gajar ka halwa">Gajar ka halwa</option>
+                <option value="Ghevar">Ghevar</option>
+                <option value="Gulab jamun">Gulab jamun</option>
+                <option value="Jalebi">Jalebi</option>
+                <option value="Imarti">Imarti</option>
+                <option value="Jalebi">Jalebi</option>
+                <option value="Petha">Petha</option>
+                <option value="Phirni">Phirni</option>
+                <option value="Rabri">Rabri</option>
+                <option value="Sheera">Sheera</option>
+                <option value="Mihidana">Mihidana</option>
+                <option value="Ariselu">Ariselu</option>
+                <option value="Adhirasam">Adhirasam</option>
+                <option value="Pootharekulu">Pootharekulu</option>
+                <option value="Kajjikaya">Kajjikaya</option>
+                <option value="Shrikhand">Shrikhand</option>
+                <option value="Aloo tikki">Aloo tikki</option>
+                <option value="Fara">Fara</option>
+                <option value="Rongi">Rongi</option>
+                <option value="Tandoori Chicken">Tandoori Chicken</option>
+                <option value="Gud papdi">Gud papdi</option>
+                <option value="Keri no ras">Keri no ras</option>
+                <option value="Konir Dom">Konir Dom</option>
+                <option value="Bebinca">Bebinca</option>
+
+            </select>
+            
+
+            
+            <br><br><button style="font-family:Calibri; font-size: 16px;" id="sub" type="submit ">Find Similar Dishes</button>
+            <h4 style="color:blue; float:right; color:#12DA9D; font-size: 30px;">{{ prediction_text }}</h4>
+<!--            <h4>{{ prediction_text }}</h4>-->
+
+
+
+
+        </form>
+
+    </div>
+    
+<!--
+    <div style="color:blue; float:right; width:300px; color:#12DA9D; font-size: 30px;">
+        <h4>{{ prediction_text }}</h4>
+    
+    </div>
+-->
+    
+
+    
+
+
+    <style>
+        body {
+            background-color: #1C1B1A;
+            text-align: center;
+            padding: 0px;
+        }
+        
+/*
+        #pred_s {
+            position: fixed;
+                right:2500px;
+                top:1000px;
+                font-family:Calibri;
+                color:#12DA9D; 
+                font-size: 30px;                   
+        }
+                
+*/
+
+        
+        h3 {
+            position: absolute;
+                left:10 px;
+                top:100 px;
+                font-family:Calibri;
+                color:#12DA9D; 
+                font-size: 20px;                   
+        }
+        
+ 
+
+
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            font-size: 18px;
+            background-color: #25BD56;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+   
+
+    </style>
+</body>
+
+</html>
