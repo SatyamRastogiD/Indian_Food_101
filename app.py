@@ -28,6 +28,12 @@ def predict():
         
  prediction = model1[Dish_Name]
         output= prediction
+        if output<0:
+            return render_template('index.html',prediction_texts="Sorry!! you cannot sell this vehicle.")
+        else:
+            return render_template('index.html',prediction_text="You can sell this vehicle at {} lakhs".format(output))
+    else:
+        return render_template('index.html')
 
 
 if __name__=="__main__":
